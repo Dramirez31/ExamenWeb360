@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Virtual 360° - Mi Universidad</title>
+    <link rel="stylesheet" href="tour.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tour Virtual 360° - Mi Universidad</h1>
+            <p>Explora los diferentes espacios haciendo clic en las zonas interactivas</p>
+        </header>
+
+        <main>
+            <div class="tour-container">
+                <!-- Contenedor de la imagen 360 -->
+                <div class="panorama-container">
+                    <div class="panorama-scroll">
+                        <img id="panorama" src="assets/images/panorama-360.jpg" alt="Vista 360 del campus">
+                    </div>
+                    
+                    <!-- Zonas interactivas (10 en total) -->
+                    <div class="hotspot" id="hotspot1" style="top: 40%; left: 15%;" data-target="info1">
+                        <div class="hotspot-marker">1</div>
+                    </div>
+                    
+                    <div class="hotspot" id="hotspot2" style="top: 35%; left: 25%;" data-target="info2">
+                        <div class="hotspot-marker">2</div>
+                    </div>
+                    
+                    <div class="hotspot" id="hotspot3" style="top: 60%; left: 35%;" data-target="info3">
+                        <div class="hotspot-marker">3</div>
+                    </div>
+                    
+                    <div class="hotspot" id="hotspot4" style="top: 45%; left: 45%;" data-target="info4">
+                        <div class="hotspot-marker">4</div>
+                    </div>
+                    
+                    <div class="hotspot" id="hotspot5" style="top: 55%; left: 55%;" data-target="info5">
+                        <div class="hotspot-marker">5</div>
+                    </div>
+                    
+                    <div class="hotspot" id="hotspot6" style="top: 30%; left: 65%;" data-target="info6">
+                        <div class="hotspot-marker">6</div>
+                    </div>
+                    
+                    <div class="hotspot" id="hotspot7" style="top: 65%; left: 75%;" data-target="info7">
+                        <div class="hotspot-marker">7</div>
+                    </div>
+                    
+                    <div class="hotspot" id="hotspot8" style="top: 40%; left: 85%;" data-target="info8">
+                        <div class="hotspot-marker">8</div>
+                    </div>
+                    
+                    <div class="hotspot" id="hotspot9" style="top: 50%; left: 5%;" data-target="info9">
+                        <div class="hotspot-marker">9</div>
+                    </div>
+                    
+                    <div class="hotspot" id="hotspot10" style="top: 25%; left: 95%;" data-target="info10">
+                        <div class="hotspot-marker">10</div>
+                    </div>
+                </div>
+
+                <!-- Panel de información -->
+                <div class="info-panel" id="infoPanel">
+                    <button class="close-btn" id="closeBtn">×</button>
+                    <div class="info-content" id="infoContent">
+                        <!-- El contenido se cargará dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Tour Virtual 360° - Examen de Aplicación Web</p>
+        </footer>
+    </div>
+
+    <!-- Contenido para las zonas interactivas (oculto inicialmente) -->
+    <div style="display: none;">
+        <!-- Zona 1: Biblioteca -->
+        <div id="info1">
+            <h2>📚 Biblioteca Central</h2>
+            <img src="assets/images/biblioteca.jpg" alt="Biblioteca" onerror="this.style.display='none'">
+            <p>Nuestra biblioteca cuenta con más de 50,000 volúmenes y espacios de estudio individual y grupal.</p>
+            <audio controls>
+                <source src="assets/audios/biblioteca.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <!-- Zona 2: Laboratorio de Computación -->
+        <div id="info2">
+            <h2>💻 Laboratorio de Computación</h2>
+            <img src="assets/images/laboratorio.jpg" alt="Laboratorio" onerror="this.style.display='none'">
+            <p>Equipado con las últimas tecnologías para el desarrollo de software y proyectos tecnológicos.</p>
+            <button class="pdf-btn" data-pdf="assets/documents/laboratorio-guia.pdf">Ver Guía del Laboratorio (PDF)</button>
+        </div>
+
+        <!-- Zona 3: Cafetería -->
+        <div id="info3">
+            <h2>☕ Cafetería Universitaria</h2>
+            <img src="assets/images/cafeteria.jpg" alt="Cafetería" onerror="this.style.display='none'">
+            <p>Un espacio para relajarse y disfrutar de alimentos saludables entre clases.</p>
+            <div class="video-placeholder">
+                <p>🎥 Video de la cafetería (agregar archivo video)</p>
+            </div>
+        </div>
+
+        <!-- Zona 4: Auditorio -->
+        <div id="info4">
+            <h2>🎭 Auditorio Principal</h2>
+            <img src="assets/images/auditorio.jpg" alt="Auditorio" onerror="this.style.display='none'">
+            <p>Con capacidad para 500 personas, sede de conferencias y eventos académicos.</p>
+            <details>
+                <summary>📅 Ver horarios de eventos</summary>
+                <ul>
+                    <li>Lunes: Conferencias de Ciencias (2:00 PM)</li>
+                    <li>Miércoles: Presentaciones de Arte (4:00 PM)</li>
+                    <li>Viernes: Foros Estudiantiles (10:00 AM)</li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- Zona 5: Canchas Deportivas -->
+        <div id="info5">
+            <h2>⚽ Canchas Deportivas</h2>
+            <img src="assets/images/canchas.jpg" alt="Canchas" onerror="this.style.display='none'">
+            <p>Instalaciones para fútbol, baloncesto y voleibol para promover el deporte universitario.</p>
+            <div class="audio-placeholder">
+                <p>🔊 Audio deportivo (agregar archivo audio)</p>
+            </div>
+        </div>
+
+        <!-- Zona 6: Jardín Botánico -->
+        <div id="info6">
+            <h2>🌿 Jardín Botánico</h2>
+            <img src="assets/images/jardin.jpg" alt="Jardín Botánico" onerror="this.style.display='none'">
+            <p>Un espacio natural con más de 200 especies de plantas para investigación y esparcimiento.</p>
+            <details>
+                <summary>🌱 Información de especies</summary>
+                <p>El jardín cuenta con especies nativas y exóticas, incluyendo orquídeas, bromelias y cactus.</p>
+            </details>
+        </div>
+
+        <!-- Zona 7: Sala de Estudio -->
+        <div id="info7">
+            <h2>📖 Salas de Estudio Grupales</h2>
+            <img src="assets/images/sala-estudio.jpg" alt="Sala de Estudio" onerror="this.style.display='none'">
+            <p>Espacios silenciosos equipados con pizarras y proyectores para trabajo en equipo.</p>
+            <button class="pdf-btn" data-pdf="assets/documents/reglamento-salas.pdf">Ver Reglamento (PDF)</button>
+        </div>
+
+        <!-- Zona 8: Centro de Innovación -->
+        <div id="info8">
+            <h2>🚀 Centro de Innovación Tecnológica</h2>
+            <img src="assets/images/innovacion.jpg" alt="Centro de Innovación" onerror="this.style.display='none'">
+            <p>Donde los estudiantes desarrollan proyectos de emprendimiento e investigación.</p>
+            <div class="video-placeholder">
+                <p>🎥 Video de innovación (agregar archivo video)</p>
+            </div>
+        </div>
+
+        <!-- Zona 9: Oficina Administrativa -->
+        <div id="info9">
+            <h2>🏢 Oficinas Administrativas</h2>
+            <img src="assets/images/oficinas.jpg" alt="Oficinas" onerror="this.style.display='none'">
+            <p>Aquí puedes realizar trámites académicos, consultas y solicitar certificados.</p>
+            <details>
+                <summary>⏰ Horarios de atención</summary>
+                <p>Lunes a Viernes: 8:00 AM - 5:00 PM</p>
+            </details>
+        </div>
+
+        <!-- Zona 10: Anfiteatro -->
+        <div id="info10">
+            <h2>🎪 Anfiteatro al Aire Libre</h2>
+            <img src="assets/images/anfiteatro.jpg" alt="Anfiteatro" onerror="this.style.display='none'">
+            <p>Espacio para presentaciones artísticas y actividades culturales al aire libre.</p>
+            <div class="audio-placeholder">
+                <p>🔊 Audio cultural (agregar archivo audio)</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="tour.js"></script>
+</body>
+</html>
